@@ -1,6 +1,6 @@
 # ASREP-Roasting
 Deep Dive on ASREP-Roasting in C#
-![Good Boi](.\goodboi.jpg)
+![Good Boi](goodboi.jpg)
 
 ## Static Compiling
 The binary requires a BouncyCastle DLL. To statically compile it, use msbuild
