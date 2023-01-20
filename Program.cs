@@ -25,7 +25,7 @@ namespace ASREP_Roasting
             }
 
             Socket socket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
-            socket.Ttl = 128;
+            socket.Ttl = 128; // Windows default
             socket.Connect(parsedArgs.DCIP, 88);
 
             foreach (SearchResult user in users)
