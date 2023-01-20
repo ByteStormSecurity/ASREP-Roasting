@@ -71,7 +71,7 @@ namespace ASREP_Roasting
 
             DirectorySearcher asrepSearcher = new DirectorySearcher(directoryEntry);
 
-            // Return only user accounts that have the 23rd bit in the UAC value set to true (the "Do not require Pre-Auth" btit)
+            // Return only user accounts that have the 23rd bit in the UAC value set to true (the "Do not require Pre-Auth" bit)
             asrepSearcher.Filter = "(&(sAMAccountType=805306368)(userAccountControl:1.2.840.113556.1.4.803:=4194304))";
             SearchResultCollection users = asrepSearcher.FindAll();
 
