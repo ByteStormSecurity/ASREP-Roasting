@@ -1,9 +1,9 @@
 # ASREP-Roasting
-Deep Dive on ASREP-Roasting in C#
+Deep Dive about ASREP-Roasting in C#
 ![Good Boi](goodboi.jpg)
 
 ## Static Compiling
-The binary requires a BouncyCastle DLL. To statically compile it, use msbuild
+The binary requires a BouncyCastle DLL, to statically compile it you can use msbuild.
 ```cmd
 msbuild /t:Restore
 msbuild /t:ILMerge
