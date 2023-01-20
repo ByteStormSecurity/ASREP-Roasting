@@ -170,6 +170,8 @@ namespace ASREP_Roasting
 
         public ASREQ(string userName, string domain)
         {
+            // https://github.com/HarmJ0y/ASREPRoast/blob/master/ASREPRoast.ps1
+
             //-----
             // AS-REQ Header
             //-----
